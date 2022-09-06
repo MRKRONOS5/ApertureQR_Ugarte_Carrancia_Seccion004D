@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Menu Estudiante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ver Asistencia</ion-card-title>
+    </ion-card-header>
+
+    <ion-button  (click)="onClick()" expand="block" fill="clear" shape="round" color="danger">
+      Ver
+    </ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>Escanear Codigo QR</ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="onClick()" expand="block" fill="clear"  shape="round" color="danger">
+      Generar Codigo
+    </ion-button>
+    <ion-img src="assets/qr.PNG"></ion-img>
+  </ion-card>
+
+
+</ion-content>
