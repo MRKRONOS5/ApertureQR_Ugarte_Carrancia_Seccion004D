@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-pagina-a',
   templateUrl: './pagina-a.page.html',
@@ -7,8 +9,9 @@ import { MenuController } from '@ionic/angular';
 })
 export class PaginaAPage implements OnInit {
 
-  constructor(private menuController: MenuController) { }
-
+  constructor(private menuController: MenuController,
+    private navController: NavController) { }
+  
   ngOnInit() {
   }
 
@@ -16,4 +19,9 @@ export class PaginaAPage implements OnInit {
   {
     this.menuController.open('first');
   }
+
+  async cerrarSesion(){
+    localStorage.removeItem('ingresado');
+    this.navController.navigateRoot('inicio-a');
+  };
 }

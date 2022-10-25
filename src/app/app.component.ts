@@ -17,21 +17,39 @@ export class AppComponent {
 
   componentes: Componente[] = [ 
     { 
-      icon: 'home-outline',
+      icon: 'apps-outline',
       name: 'Inicio',
       redirecTo: '/inicio',
     },
     
     {
       icon: 'walk-outline',
-      name: 'Inicio sesion docente',
-      redirecTo:'/inicio-d',
-    },
-    {
-      icon: 'walk-outline',
       name: 'Inicio estudiante',
       redirecTo: '/inicio-a',
     },
+    {
+      icon: 'man-outline',
+      name: 'Inicio sesion docente',
+      redirecTo:'/inicio-d',
+    },
+    { 
+      icon: 'person-outline',
+      name: 'registro-estudiante',
+      redirecTo: '/registro-usuario',
+    },
+    {
+      icon: 'person-outline',
+      name: 'registro-docente',
+      redirecTo: '/registro-docente',
+    },
+
+    {
+      icon: 'aperture-outline',
+      name: 'api rick and morty',
+      redirecTo: '/api',
+      
+    }
+
   ];
 
 

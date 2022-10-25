@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'pagina-a',
     loadChildren: () => import('./pages/pagina-a/pagina-a.module').then( m => m.PaginaAPageModule)
   },
+  {
+    path: 'registro-usuario',
+    loadChildren: () => import('./pages/registro-usuario/registro-usuario.module').then( m => m.RegistroUsuarioPageModule)
+  },
+  {
+    path: 'api',
+    loadChildren: () => import('./pages/api/api.module').then( m => m.ApiPageModule)
+  },
+  {
+    path: 'registro-docente',
+    loadChildren: () => import('./pages/registro-docente/registro-docente.module').then( m => m.RegistroDocentePageModule)
+  },
 ];
 
 @NgModule({

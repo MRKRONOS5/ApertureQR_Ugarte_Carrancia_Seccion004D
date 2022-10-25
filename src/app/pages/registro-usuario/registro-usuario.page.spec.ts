@@ -1,18 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-import { Inicio_dPage } from './inicio-d.page';
 
-describe('Inicio_dPage', () => {
-  let component: Inicio_dPage;
-  let fixture: ComponentFixture<Inicio_dPage>;
+import { RegistroUsuarioPage } from './registro-usuario.page';
+
+describe('RegistroUsuarioPage', () => {
+  let component: RegistroUsuarioPage;
+  let fixture: ComponentFixture<RegistroUsuarioPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ Inicio_dPage ],
+      declarations: [ RegistroUsuarioPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Inicio_dPage);
+    fixture = TestBed.createComponent(RegistroUsuarioPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
@@ -20,4 +21,6 @@ describe('Inicio_dPage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  
 });

@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
+
+import { RegistroUsuarioPageRoutingModule } from './registro-usuario-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InicioAPageRoutingModule } from './inicio-a-routing.module';
-import { InicioAPage } from './inicio-a.page';
+import { RegistroUsuarioPage } from './registro-usuario.page';
 
 @NgModule({
   imports: [
+    ReactiveFormsModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioAPageRoutingModule,
-    ReactiveFormsModule
+    RegistroUsuarioPageRoutingModule
   ],
-  declarations: [InicioAPage]
+  declarations: [RegistroUsuarioPage]
 })
-export class InicioAPageModule {}
+export class RegistroUsuarioPageModule {}

@@ -10,43 +10,31 @@
 </ion-header>
 
 <ion-content>
+  <ion-card>
 
-  <form #formulario="ngForm" (ngSubmit)="onSubmit()">
-  
+    <ion-card-header>
+      <ion-card-title>Login</ion-card-title>
+    </ion-card-header>
 
-    <ion-item>
-      <ion-label>Nombre: </ion-label>
-      <ion-input class="texto" type="text" placeholder="Nombre"
-                 name="nombre" [(ngModel)]= "usuario.nombre" required>
-      </ion-input>
-    </ion-item>
+    <ion-card-content>
+        <form [formGroup]="formularioLogin">
 
-    <ion-item>
-      <ion-label>Email: </ion-label>
-      <ion-input class="texto" type="email" placeholder="Email"
-                 name="email" value="" [(ngModel)]= "usuario.email"
-                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-                 required>
-      </ion-input>
-    </ion-item>
+          <ion-item>
+            <ion-label position="floating">Correo: </ion-label>
+            <ion-input type="email" formControlName="correo"></ion-input>
+          </ion-item>
 
-    <ion-item>
-      <ion-label>Password: </ion-label>
-      <ion-input class="texto" type="password"	 placeholder="Contraseña"
-                 name="password" value="" [(ngModel)]= "usuario.password"
-                 required>
-      </ion-input>
-    </ion-item>
-
-    <ion-button [disabled] ="formulario.invalid"
-            type="submit" expand="block" routerLink="/pagina-d">
-      Enviar
-    </ion-button>
-    <ion-card>
-      <ion-img src="assets/qr.PNG"></ion-img>
-    </ion-card>
-
-  </form>
-
-
+          <ion-item>
+            <ion-label position="floating">Password: </ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+        </form>
+        <br>
+        <ion-button (click)="Ingresar()" expand="block" fill="outline" shape="round">
+          Ingresar
+        </ion-button>
+        <br>
+        <ion-img src="assets/listaa.PNG"></ion-img>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
