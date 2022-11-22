@@ -8,9 +8,14 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./pagina-d.page.scss'],
 })
 export class PaginaDPage implements OnInit {
-
+  qrCodeString= 'Hola Mundo'; 
+  scannedResult:any;
   constructor(private menuController: MenuController,
     private navController: NavController) { }
+
+    usuario={
+      nom:'',
+    }
 
   ngOnInit() {
   }
@@ -23,4 +28,11 @@ export class PaginaDPage implements OnInit {
     localStorage.removeItem('ingresado');
     this.navController.navigateRoot('inicio-a');
   };
+  generaScan(){
+    this.qrCodeString= this.usuario.nom;
+  }
+
+  verScan(){
+    this.scannedResult=this.qrCodeString;
+  }
 }

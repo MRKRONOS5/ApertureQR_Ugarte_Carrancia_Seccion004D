@@ -25,10 +25,48 @@
       <ion-card-subtitle></ion-card-subtitle>
       <ion-card-title>Crear Asistencia</ion-card-title>
     </ion-card-header>
-    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" color="danger">
-      Generar Codigo QR
+    <ion-card class="ion-text-center">
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="fixed">Nombre: </ion-label>
+          <ion-input type="text" [(ngModel)]="usuario.nom" required></ion-input>
+        </ion-item>
+
+        <ion-button 
+            expand="block" 
+            class="ion-margin" 
+            (click)="generaScan()">
+            Generate QR Code  
+        </ion-button>
+
+        <qrcode 
+          [qrdata]="qrCodeString" 
+          [width]="256" 
+          [errorCorrectionLevel]="'M'">
+        </qrcode>
+
+
+      </ion-card-content>
+   </ion-card>
+
+   <ion-button 
+      expand="block" 
+      class="ion-margin" 
+      (click)="verScan()">
+          Ver QR Code  
     </ion-button>
-    <br>
+
+    <ion-item>
+      <ion-label class="ion-text-wrap">Scan Result: {{scannedResult}}</ion-label>
+    </ion-item>
+
+
+
+
+
+
+    
     <ion-button (click)="cerrarSesion()" expand="block" fill="outline" shape="round">
       cerrar Sesion
     </ion-button>

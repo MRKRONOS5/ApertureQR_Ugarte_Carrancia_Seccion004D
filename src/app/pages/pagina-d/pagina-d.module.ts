@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { PaginaDPageRoutingModule } from './pagina-d-routing.module';
-
+import { QRCodeModule } from 'angularx-qrcode';
 import { PaginaDPage } from './pagina-d.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { PaginaDPage } from './pagina-d.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PaginaDPageRoutingModule
+    PaginaDPageRoutingModule,
+    QRCodeModule
   ],
   declarations: [PaginaDPage]
 })
